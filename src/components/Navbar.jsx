@@ -42,7 +42,10 @@ const Navbar = () => {
       {/* Navbar end */}
       <div className='flex items-center gap-6'>
         <div className="flex items-center gap-6">
-          <FiSearch onClick={()=>setshowSearch(true)} className='text-xl text-gray-600 cursor-pointer'/>
+          <Link to='/products'>
+            <FiSearch onClick={()=>setshowSearch(true)} className='text-xl text-gray-600 cursor-pointer'/>
+          </Link>
+          
           <Link className="relative " to='/cart'>
             <CiShoppingBasket className='text-2xl mb-1'/>
             <p className="absolute right-[-5px] bottom-[13px] text-center w-4 leading-4 bg-[#FFAF00] text-black text-[10px] rounded-full aspect-ratio font-bold">
