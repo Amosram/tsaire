@@ -6,6 +6,7 @@ import { CiShoppingBasket } from "react-icons/ci";
 import { HiMiniBars3BottomRight } from "react-icons/hi2";
 import { MdClose } from "react-icons/md";
 import { ProductsContext } from '../context/ProductsContext';
+import { BiSolidUserCircle } from "react-icons/bi";
 
 
 
@@ -53,12 +54,14 @@ const Navbar = () => {
             </p>
           </Link>
           <div className="group relative hidden sm:flex">
-            <Link to='/login'><p className='text-base cursor-pointer text-gray-200 font-normal rounded-2xl px-3 py-1 bg-black'>Sign in</p></Link>
+            <Link to='/login' className='flex items-center gap-2 text-base cursor-pointer text-slate-900 border font-normal rounded-[15px] hover:shadow-sm px-3 py-[2px] bg-white'><p>Sign in</p>
+            <BiSolidUserCircle/>
+            </Link>
           </div>
           <HiMiniBars3BottomRight onClick={()=>setVisible(true)} className='text-2xl cursor-pointer sm:hidden'/>
         </div>
         {/* sidebar menu for small screen */}
-        <div className={`fixed top-0 right-0 bottom-0 overflow-hidden text-gray-200 bg-black max-h-screen transition-all ${visible ? " w-full h-[100vh]" : "w-0"} z-50`}>
+        <div className={`fixed top-0 right-0 bottom-0 overflow-hidden text-gray-200 bg-slate-800 max-h-screen transition-all ${visible ? " w-full h-[100vh]" : "w-0"} z-50`}>
           <div className="flex flex-col  text-gray-200">
             <div onClick={()=>setVisible(false)} className="flex items-center p-3 cursor-pointer ml-2">
               <MdClose className='text-xl'/>

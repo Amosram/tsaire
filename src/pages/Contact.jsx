@@ -17,8 +17,8 @@ const Contact = () => {
     <div className='min-h-[100vh] border-t px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
       <div className='mt-5 flex flex-col items-center mb-14 '>
         <Title text1={'CONTACT'} text2={"US"}/>
-        <div className='mt-10 flex flex-col items-center sm:flex-row gap-10 px-8 py-8 contact shadow'>
-          <img src={assets.contact_img} className='w-80' alt=""/>
+        <div className='mt-10 flex flex-col items-center sm:flex-row gap-10 px-8 py-8 login shadow rounded-[15px]'>
+          <img src={assets.contact_img} className='w-80 rounded-[15px]' alt=""/>
           <div className='flex flex-col gap-4'>
             <h1>Our Address:</h1>
             <div>
@@ -30,7 +30,7 @@ const Contact = () => {
             </div>
 
             <div className='flex flex-col gap-4'>
-              <h1>Quick call or Email:</h1>
+              <h1>Quick call or Email Us:</h1>
               <div>
                 <p className='flex items-center gap-2 text-gray-800'>
                   <FaPhoneAlt className='text-sm'/>

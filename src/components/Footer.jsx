@@ -5,6 +5,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa6";
 
 const Footer = () => {
+    const year = new Date().getFullYear();
   return (
     <div className=' bg-black text-gray-200 px-4 sm:px-24 w-full'>
        <div className='flex flex-col sm:grid grid-cols-[2fr_1fr_1fr] gap-14 text-sm py-6 mb-10'>
@@ -29,7 +30,7 @@ const Footer = () => {
                 <ul className='flex flex-col gap-1 text-base text-gray-400'>
                     <li className='flex items-center gap-2'>
                         <FaPhoneAlt className=' text-sm'/>
-                       <p>+254 752943240</p>
+                       <p>+254 793810919</p>
                     </li>
                     <li className='flex items-center gap-2'>
                         <FaEnvelope className=' text-sm'/>
@@ -42,7 +43,7 @@ const Footer = () => {
 
         <div>
             <hr className='border-none w-full h-[1px] bg-gray-700'/>
-            <p className='py-5 text-sm text-center  text-gray-400'>&copy;2024 thinksmoothie.com All Rights Reserved</p>
+            <p className='py-5 text-sm text-center  text-gray-400'>&copy;{year} thinksmoothie.com All Rights Reserved</p>
         </div>
     </div>
   )
