@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Title from '../components/Title'
 import {assets} from '../assets/assets'
 import Newsletter from '../components/NewsLetter'
@@ -9,10 +9,13 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import {ProductsContext} from '..//context/ProductsContext'
 
 
 const Contact = () => {
+   const {useDocumentTitle} = useContext(ProductsContext);
+    useDocumentTitle("Thinksmoothie | Contact Us");
   return (
     <div className='min-h-[100vh] border-t px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
       <div className='mt-5 flex flex-col items-center mb-14 '>

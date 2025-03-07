@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Title from '../components/Title'
 import {assets} from '../assets/assets'
+import {ProductsContext} from '../context/ProductsContext'
 
 const About = () => {
+  const {useDocumentTitle} = useContext(ProductsContext);
+  useDocumentTitle("Thinksmoothie | About Us");
   return (
     <div className='min-h-[100vh] border-t px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] mb-40'>
       <div className='flex flex-col items-center w-full mt-4'>

@@ -1,6 +1,6 @@
-import { createContext, useState } from "react";
-import {products} from '../assets/assets'
-import {useNavigate} from 'react-router-dom'
+import { createContext, useState, useEffect, useRef } from "react";
+import {products} from '../assets/assets';
+import {useNavigate} from 'react-router-dom';
 
 
 export const ProductsContext = createContext();
@@ -13,6 +13,21 @@ const ProductsContextProvider = (props) => {
     const [showSearch, setshowSearch] = useState(false);
     const [cartItems, setCartItems] = useState({});
     const navigate = useNavigate();
+
+    //dynamic title page rendering
+    const useDocumentTitle = (title, prevailOnUnmount = false) => {
+        const defaultTitle = useRef(document.title);
+
+        useEffect(() => {
+            document.title = title;
+        }, [title]);
+
+        useEffect(() => () => {
+            if (!prevailOnUnmount) {
+                document.title = defaultTitle.current;
+            }
+        }, [])
+    }
 
     const addToCart = async (itemId) => {
     
@@ -77,7 +92,8 @@ const ProductsContextProvider = (props) => {
         addToCart,
         getCartCount,
         updateQuantity,
-        getTotalAmount
+        getTotalAmount,
+        useDocumentTitle
     }
     
     return (

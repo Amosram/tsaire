@@ -1,8 +1,9 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import { MdClose } from "react-icons/md";
 import google_icon from '../assets/images/google-icon.svg';
 import { IoIosEye } from "react-icons/io";
 import { IoIosEyeOff } from "react-icons/io";
+import { ProductsContext } from '../context/ProductsContext';
 
 
 
@@ -14,6 +15,8 @@ const Login = () => {
       email:"",
       password:""
   })
+  const {useDocumentTitle} = useContext(ProductsContext);
+  useDocumentTitle("Login | Register");
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);

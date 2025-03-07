@@ -7,8 +7,9 @@ import { ProductsContext } from '../context/ProductsContext';
 const AllProducts = () => {
   const [showFilter, setShowFilter] = useState(false)
   const [filterProducts, setFilterProducts] = useState([])
-  const {products, search, showSearch} = useContext(ProductsContext)
+  const {products, search, showSearch, useDocumentTitle} = useContext(ProductsContext)
   const [category, setCategory] = useState([])
+  useDocumentTitle("Thinksmoothie | All Products");
 
   const handleClick = () => {
     setShowFilter(!showFilter)

@@ -7,8 +7,9 @@ import CartTotal from '../components/CartTotal';
 
 
 const Cart = () => {
-  const {products, currency, cartItems, updateQuantity, navigate} = useContext(ProductsContext);
+  const {products, currency, cartItems, updateQuantity, navigate, useDocumentTitle} = useContext(ProductsContext);
   const [cartData, setCartData] = useState([]);
+  useDocumentTitle("Thinksmoothie | Your Cart");
 
 
   useEffect(()=> {
