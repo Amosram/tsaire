@@ -9,6 +9,7 @@ import prod_8 from './images/prod-8.png'
 import prod_9 from './images/prod-9.png'
 import prod_10 from './images/prod-10.png'
 
+
 import logo from './images/ts-logo.png'
 import hero_img from './images/hero-img.png'
 import menu_1 from './images/menu-1.png'
@@ -23,13 +24,16 @@ import about_img_2 from './images/about-img-2.jpg'
 import about_img_3 from './images/about-img-3.jpg'
 import contact_img from './images/contact-img.jpg'
 
+import logo_bg from './images/bg-login.jpg'
+
 export const assets = {
     logo,
     hero_img,
     about_img_1,
     about_img_2,
     about_img_3,
-    contact_img
+    contact_img,
+    logo_bg
 }
 
 export const menu = [
